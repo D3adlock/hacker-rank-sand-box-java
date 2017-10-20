@@ -1,0 +1,25 @@
+import java.nio.charset.StandardCharsets
+
+apply plugin: 'java'
+
+group = 'com.claudio.exersises'
+version = '0.1.0'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '4.2'
+}
+
+jar {
+    manifest {
+        attributes('Main-Class': 'com.claudio.exercises.Solution')
+    }
+}
+
+def inputText = new File('input').text
+
+task run(type: JavaExec) {
+  dependsOn 'build'
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'com.claudio.exercises.Solution'
+  standardInput = new ByteArrayInputStream(inputText.getBytes(StandardCharsets.UTF_8.name()));
+}
