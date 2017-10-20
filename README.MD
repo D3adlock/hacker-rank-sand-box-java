@@ -14,7 +14,7 @@ gradlew.bat run
 
 ## Solution Class
 
-You will be able to fin the `Solution` class under `src/main/java/com/claudio/exercies` package. In this class you can implement your solution.
+You will be able to find the `Solution` class under `src/main/java/com/claudio/exercies` package. In this class you can implement your solution.
 
 ## Input
 
